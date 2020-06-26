@@ -1,0 +1,32 @@
+{
+  "name": "cargame",
+  "version": "1.0.0",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js",
+    "webpack-watch": "webpack --config webpack-watch.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://maxdsr@bitbucket.org/getiktraining/cargame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/getiktraining/cargame#readme",
+  "devDependencies": {
+    "@types/faker": "^4.1.3",
+    "@types/jquery": "^3.3.6",
+    "@types/mocha": "^5.2.5",
+    "copy-webpack-plugin": "^4.5.2",
+    "faker": "^4.1.0",
+    "jquery": "^3.3.1",
+    "less": "^3.8.1",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

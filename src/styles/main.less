@@ -1,0 +1,542 @@
+body {
+  margin: 0;
+}
+
+div.route {
+  width:1000px;
+  height: 100vh;
+  background-color: #3C3F41;
+  position: relative;
+  overflow: hidden;
+}
+
+div.left-side,
+div.right-side,
+div.separating-sides-lines,
+div.road-sides div.left-band,
+div.road-sides div.band-separator,
+div.road-sides div.right-band {
+  float: left;
+  height: 100%;
+}
+
+div.left-band, div.right-band {
+  position: relative;
+}
+
+
+div.separating-sides-lines {
+
+  position: relative;
+  width: 20px;
+  height: 100vh;
+  background: #fff;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    background: #3C3F41;
+    left: calc(50% - 4px);
+    height: 100%;
+  }
+}
+
+div.left-side, div.right-side {
+  float: left;
+  width: calc(50% - 10px);
+}
+
+div.band-separator {
+  width: 16px;
+
+  div.band-item {
+    height: calc(100% / 10);
+
+    &:nth-child(2n) {
+      background: #fff;
+    }
+  }
+
+
+}
+
+div.band {
+  width: calc(50% - 8px);
+}
+
+div.seats {
+  margin: 25px auto 0 auto;
+
+  div.single-seat {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+    box-shadow:
+            1px 0 0 0 #979797,
+            0 1px 0 0 #979797,
+            1px 1px 0 0 #979797,
+            1px 0 0 0 #979797 inset,
+            0 1px 0 0 #979797 inset;
+  }
+}
+
+
+img.car-brand-image {
+  position: absolute;
+  top: 0;
+  left: (50% - 9px);
+  width: 23px;
+  height: 23px;
+}
+
+
+/*Car*/
+
+
+div.car {
+
+  &.move-class {
+    left: 74px;
+  }
+
+  img.car-brand-image {
+
+  }
+
+  div.body {
+    position: relative;
+    margin: 0 auto;
+    width: 85px;
+    height: 135px;
+    background: #d8d8d8;
+    border: 1px solid transparent;
+  }
+
+  div.seats {
+    position: relative;
+    width: 62px;
+    height: 81px;
+
+    &.two-seats {
+      height: 40px;
+    }
+
+    &.four-seats {
+
+      height: 76px;
+
+      div.single-seat {
+        height: 50%;
+      }
+    }
+
+    &.six-seats {
+      height: 92px;
+      margin: 33px auto 0 auto;
+
+      div.single-seat {
+        height: calc(100% / 3);
+      }
+    }
+
+  }
+
+  div.wheels-container {
+
+    div.wheel {
+      position: absolute;
+      background: #889198;
+      width: 17px;
+      height: 29px;
+
+      &:nth-child(1) {
+        left : -18px;
+        top: 10px;
+      }
+      &:nth-child(2) {
+        right : -18px;
+        top: 10px;
+      }
+      &:nth-child(3) {
+        left : -18px;
+        bottom: 10px;
+      }
+      &:nth-child(4) {
+        right : -18px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+
+/*Motorcycle*/
+
+div.motorcycle {
+
+  &.move-class {
+    left: 100px;
+  }
+
+  div.body {
+    width: 32px;
+    height: 135px;
+    background: #d8d8d8;
+    border: 1px solid transparent;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  img.car-brand-image {
+    position: absolute;
+    top: 0;
+    left: (50% - 27px);
+    width: 17px;
+    height: 17px;
+  }
+
+  div.wheels-container {
+    div.wheel {
+      position: absolute;
+      background: #889198;
+      width: 9px;
+      height: 29px;
+
+      &:nth-child(1) {
+        top: 10px;
+        left: -10px;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+        right: -10px;
+      }
+
+      &:nth-child(3) {
+        bottom: 10px;
+        left: -10px;
+      }
+
+      &:nth-child(4) {
+        bottom: 10px;
+        right: -10px;
+      }
+    }
+  }
+
+  div.seats {
+
+    &.one-seat {
+
+      width: 23px;
+      height: 63px;
+
+      div.single-seat {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.two-seats {
+
+      width: 23px;
+      height: 90px;
+      margin : 20px auto;
+
+      div.single-seat {
+        height: 50%;
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+/*Minibus */
+
+
+div.minibus {
+
+  &.move-class {
+    left: 63px;
+  }
+
+  div.body {
+    position: relative;
+    margin: 0 auto;
+    width: 104px;
+    height: 200px;
+    background: #d8d8d8;
+    border: 1px solid transparent;
+  }
+
+  div.seats {
+    position: relative;
+
+    &.two-seats {
+      width: 82px;
+      height: 40px;
+
+    }
+
+    &.sixteen-seats {
+
+      width: 82px;
+      height: 150px;
+      margin: 40px auto 0 auto;
+
+      div.single-seat {
+        height: calc(100% / 8);
+      }
+    }
+  }
+
+
+  div.wheels-container {
+    div.wheel {
+      position: absolute;
+      background: #889198;
+      width: 17px;
+      height: 29px;
+
+      &:nth-child(1) {
+        left: -18px;
+        top: 10px;
+      }
+
+      &:nth-child(2) {
+        right: -18px;
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        left : -18px;
+        bottom: 10px;
+      }
+
+      &:nth-child(4) {
+        right : -18px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+
+
+/* Truck */
+
+
+div.truck {
+
+  &.move-class {
+    left: 55px;
+  }
+
+  div.body{
+    position: relative;
+    height: 90px;
+    width: 120px;
+    margin: 0 auto;
+    background: #d8d8d8;
+    border: 1px solid transparent;
+  }
+
+
+  div.seats {
+
+
+    &.four-seats {
+      width: 98px;
+      height: 60px;
+
+      div.single-seat {
+        height: 50%;
+      }
+    }
+
+    &.two-seats {
+      width: 98px;
+      height: 45px;
+    }
+  }
+
+
+  .truckWheels() {
+    position: absolute;
+    background: #889198;
+    width: 17px;
+    height: 29px;
+  }
+
+  div.wheels-container {
+
+    div.wheel {
+
+      .truckWheels();
+
+      &:nth-child(1) {
+        left: -18px;
+        top: 10px;
+      }
+
+      &:nth-child(2) {
+        right: -18px;
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        left : -18px;
+        bottom: 10px;
+      }
+
+      &:nth-child(4) {
+        right : -18px;
+        bottom: 10px;
+      }
+    }
+  }
+
+  div.hitch {
+    width: 23px;
+    height: 38px;
+    background: #d8d8d8;
+    margin: 0 auto;
+  }
+
+  div.trail {
+    position: relative;
+    height: 238px;
+    width: 121px;
+    margin: 0 auto;
+    background: #d8d8d8;
+
+    div.wheels-container {
+      div.wheel {
+
+        .truckWheels();
+
+        &:nth-child(1) {
+          left: -17px;
+          top: 10px;
+        }
+
+        &:nth-child(2) {
+          right: -17px;
+          top: 10px;
+        }
+
+        &:nth-child(3) {
+          left : -17px;
+          bottom: 55px;
+        }
+
+        &:nth-child(4) {
+          right: -17px;
+          bottom: 55px;
+        }
+
+        &:nth-child(5) {
+          right : -17px;
+          bottom: 10px;
+        }
+
+        &:nth-child(6) {
+          left : -17px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+ //Tractor
+
+
+div.tractor {
+
+  &.move-class {
+    left : 68px;
+  }
+
+  div.body {
+    margin : 0 auto;
+
+    div.wheel {
+      position: absolute;
+      background-color: #889198;
+    }
+
+    div.front-side {
+      margin: 0 auto;
+      background-color: #d8d8d8;
+      position: relative;
+      width: 40px;
+      height: 65px;
+
+      div.wheels-container {
+        div.wheel {
+
+          width: 17px;
+          height: 30px;
+          top : 10px;
+
+          &:nth-child(1) {
+            left: -17px;
+          }
+
+          &:nth-child(2) {
+            right: -17px;
+          }
+        }
+      }
+    }
+
+
+    div.back-side {
+      margin: 0 auto;
+      background-color: #d8d8d8;
+      position: relative;
+      width: 97px;
+      height: 128px;
+      border: 1px solid transparent;
+
+      div.seats {
+        margin: 57px auto 0 auto;
+        width: 58px;
+        height: 60px;
+
+        div.single-seat {
+          width: 100%;
+        }
+      }
+
+      div.wheel {
+
+        width: 33px;
+        height: 71px;
+        bottom: 11px;
+
+        @wheelDistance : -34px;
+
+        &:nth-child(1) {
+          left: @wheelDistance;
+        }
+
+        &:nth-child(2) {
+          right: @wheelDistance;
+        }
+      }
+    }
+  }
+}
+
+.move-class {
+  position: absolute;
+}
+
